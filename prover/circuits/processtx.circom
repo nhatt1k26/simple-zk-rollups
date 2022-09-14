@@ -2,10 +2,14 @@ include "./merkletree.circom";
 include "./eddsa.circom";
 include "./hasher.circom";
 
-include "../node_modules/circomlib/circuits/bitify.circom";
-include "../node_modules/circomlib/circuits/mimcsponge.circom";
-include "../node_modules/circomlib/circuits/mux1.circom";
-include "../node_modules/circomlib/circuits/comparators.circom";
+// include "../node_modules/circomlib/circuits/bitify.circom";
+// include "../node_modules/circomlib/circuits/mimcsponge.circom";
+// include "../node_modules/circomlib/circuits/mux1.circom";
+// include "../node_modules/circomlib/circuits/comparators.circom";
+
+
+include "../node_modules/circomlib/circuits/mimc.circom";
+include "../node_modules/circomlib/circuits/eddsamimc.circom";
 
 template ProcessTx(depth) {
   // Processes a single transaction

@@ -59,7 +59,6 @@ contract Hasher {
     arr[1] = publicKeyY;
     arr[2] = balance;
     arr[3] = nonce;
-
     return hashMulti(arr, 0);
   }
 }

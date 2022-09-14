@@ -199,13 +199,11 @@ contract RollUp {
     // Inputs are the public signal
     uint256 publicKeyX = input[0];
     uint256 publicKeyY = input[1];
-
     uint256 publicKeyHash = hasher.hashPair(publicKeyX, publicKeyY);
     User memory user = balanceTreeUsers[publicKeyHash];
     if (user.balance <= 0) {
       revert("Cannot withdraw with 0 balance");
     }
-
     withdraw(user.balance, a, b, c, input);
   }
 
